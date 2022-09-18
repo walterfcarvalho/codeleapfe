@@ -1,4 +1,4 @@
-# codeleap frontent task
+# CodeLeap Frontent task
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -29,19 +29,19 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Technologies
 
 ### Date-fns
-  A popular library to handle Date. 
+  A popular library to handle Date
   (https://date-fns.org/v2.29.3/docs/differenceInMinutes)
 
 ### Favicon.io
-  Simple tool to generate favicons 
+  Simple tool to generate favicons
   (https://favicon.io/favicon-converter/)
 
 ### Firebse
-  All power of google databases 
+  All power of google databases
   (https://firebase.google.com/)
 
 ### ReactJs
-  S2  
+  S2
   (https://reactjs.org/)
 
 ### React Bootstrap 
