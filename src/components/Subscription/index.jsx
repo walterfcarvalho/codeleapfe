@@ -42,7 +42,7 @@ const  Subscription = () => {
           <Button 
             type="submit"
             variant="dark" 
-            disabled= { user.length <= 3 ? "disabled" : "" }
+            disabled= { user.length <= 0 ? "disabled" : "" }
           >
             ENTER
           </Button>
@@ -53,7 +53,7 @@ const  Subscription = () => {
         </Modal.Body>
       </Modal>
     </>
-  );
+  )
 }
 
 export default Subscription

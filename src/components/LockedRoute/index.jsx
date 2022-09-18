@@ -4,7 +4,7 @@ import Subscription from '../Subscription'
 
 
 const LockedRoute = ({ child }) => {
-  const [user, setUser] =  useContext(AppContext).user
+  const user = useContext(AppContext).user[0]
 
   return user.length >= 3
     ? child

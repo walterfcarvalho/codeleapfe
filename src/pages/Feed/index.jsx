@@ -1,15 +1,10 @@
-import React, { useContext } from 'react'
-import { AppContext } from '../App'
 import { Link } from 'react-router-dom'
 
 import FormPost from '../../components/FormPost'
 import Posts from '../../components/Posts'
-import { useEffect } from 'react'
 
 
 const Feed = () => {
-  const { user, setUser } = useContext(AppContext).user
-
 
   return <div className="container-md" >
 

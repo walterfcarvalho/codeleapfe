@@ -1,11 +1,11 @@
 import { useState, useContext } from 'react'
-import Card from 'react-bootstrap/Card';
+import Card from 'react-bootstrap/Card'
 import { RiDeleteBinLine } from 'react-icons/ri'
 import { BiEdit } from 'react-icons/bi'
-import QuestionComponent from '../../QuestionComponent'
 
-import * as firebase from '../../../actions/firebase'
 import { AppContext } from '../../../pages/App'
+import QuestionComponent from '../../QuestionComponent'
+import * as firebase from '../../../actions/firebase'
 import * as dateUtil from '../../../actions/dateUtil'
 import EditPost from '../../EditPost'
 
@@ -13,12 +13,11 @@ import EditPost from '../../EditPost'
 
 const PostCard = ({ user, post, setPosts }) => {
   const [isDel, setIsDel] = useState(false)
-  const [errMsg, setErrMsg] = useContext(AppContext).error
+  const setErrMsg = useContext(AppContext).error[1]
   const [ editPost, setEditPost ] = useState(false)
 
-
   const isCanDelete = () => {
-    if (setPosts == undefined) {
+    if (setPosts === undefined) {
       setErrMsg("Unabled to delete posts from others nicks.")
       return
     }

@@ -6,7 +6,7 @@ import LockedRoute from '../../components/LockedRoute'
 import Feed from '../Feed'
 
 
-export const AppContext = React.createContext();
+export const AppContext = React.createContext()
 
 const history = createBrowserHistory({ window })
 

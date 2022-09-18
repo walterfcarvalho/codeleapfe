@@ -2,10 +2,8 @@ import React, { useState, useContext } from 'react'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 import { AppContext } from '../../pages/App'
-import Posts from '../../pages/Feed'
 import AlertDismissible from '../AlertDismissible'
 
 import * as firebase from './../../actions/firebase'
@@ -16,11 +14,10 @@ const emptyPost = {
 }
 
 const FormPost = () => {
-  const [ user, setUser ] = useContext(AppContext).user
-  const [ errMsg, setErrMsg ] = useContext(AppContext).error
-  const [ posts, setPosts] = useContext(AppContext).posts
+  const user = useContext(AppContext).user[0]
+  const setErrMsg = useContext(AppContext).error[1]
+  const setPosts = useContext(AppContext).posts[1]
 
-  const [validated, setValidated] = useState(false)
   const [post, setPost] = useState({...emptyPost})
 
   const handleSubmit = (e) => {
@@ -57,9 +54,9 @@ const FormPost = () => {
   }
 
   return <>
-    <Form className="m-5 border" onSubmit={handleSubmit}>
+    <Form className="m-3 border" onSubmit={handleSubmit}>
 
-      <h3 className="m-2"> What's on in your mind ?</h3>
+      <h4 className="m-2"> What's on in your mind, {user} ?</h4>
 
       <Form.Group
         controlId="title"
@@ -101,7 +98,7 @@ const FormPost = () => {
         <Button className='me-2 mb-2'
           type="submit"
           variant="dark"
-          disabled={(post.title.length <= 3 || post.content.length <= 3) ? "disabled" : ""}
+          disabled={(post.title.length > 0 || post.content.length > 0) ? "disabled" : ""}
           >
           ENTER
         </Button>

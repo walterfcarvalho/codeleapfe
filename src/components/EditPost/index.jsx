@@ -10,9 +10,9 @@ import * as firebase from './../../actions/firebase'
 
 
 const EditPost = ({editPost, setEditPost, propPost}) => {
-  const [posts, setPosts] = useContext(AppContext).posts
+  const setPosts = useContext(AppContext).posts[1]
   const [post, setPost] = useState({...propPost})
-  const [error, setErrMsg ] = useContext(AppContext).error
+  const setErrMsg = useContext(AppContext).error[1]
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -29,7 +29,6 @@ const EditPost = ({editPost, setEditPost, propPost}) => {
 
     firebase.updPost(id, newPost)
       .then(res => {
-
         setPosts(oldPosts => oldPosts
         .map( oldPost => oldPost.id === id 
           ? { ...newPost, id: id}       
