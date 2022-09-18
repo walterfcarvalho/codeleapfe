@@ -52,7 +52,6 @@ const FormPost = () => {
 
       })
       .catch(err => {
-        console.log(err.msg)
         setErrMsg('Error on post ' + err.message)
       })
   }

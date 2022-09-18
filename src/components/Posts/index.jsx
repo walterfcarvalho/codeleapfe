@@ -13,7 +13,7 @@ const Posts = () => {
     firebase.getPosts()
       .then(res => setPosts(res))
       .catch(err =>
-        console.log('erro:', err)
+        setErrMsg(err.message)
       )
   }, [])
 

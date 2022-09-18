@@ -35,8 +35,7 @@ const PostCard = ({ user, post, setPosts }) => {
         ))
       })
       .catch(err => {
-        console.log('erro', err.message)
-
+        setErrMsg(err.message)
       })
   }
 

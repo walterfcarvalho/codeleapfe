@@ -40,7 +40,6 @@ const EditPost = ({editPost, setEditPost, propPost}) => {
         setEditPost(false)          
       })
       .catch(err => {
-        console.log(err.msg)
         setErrMsg('Error update post ' + err.message)
       })
   }
