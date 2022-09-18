@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.form-control:focus {
+  border-color: black !important;
+  box-shadow: 0 0 5px black !important;
+}
