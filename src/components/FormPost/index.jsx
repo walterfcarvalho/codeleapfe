@@ -98,7 +98,7 @@ const FormPost = () => {
         <Button className='me-2 mb-2'
           type="submit"
           variant="dark"
-          disabled={(post.title.length > 0 || post.content.length > 0) ? "disabled" : ""}
+          disabled={(post.title.length < 0 || post.content.length < 0) ? "disabled" : ""}
           >
           ENTER
         </Button>
